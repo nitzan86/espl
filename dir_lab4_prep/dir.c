@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
 		directory = opendir(curr_dir);
 	}
 	else {
-		printf("opening dir: %s\n", argv[arg]);
+		//printf("opening dir: %s\n", argv[arg]);
 		directory = opendir(argv[arg]);
 	}
 	if (directory == NULL){
@@ -78,10 +78,10 @@ int main(int argc, char *argv[])
 			//printf("%s\n", path);
 			lstat(path, &file_stat);
 			size = file_stat.st_size;
-			printf("file size: %d file name: %s\n", size, dir_entry->d_name);
+			printf("%d %s\n", size, dir_entry->d_name);
 		}
 		else
-			printf("file name: %s\n", dir_entry->d_name);
+			printf("%s\n", dir_entry->d_name);
 	}
 	
 	closedir(directory);
