@@ -1,0 +1,21 @@
+1)  secret-elf-a: REL
+	secret-elf-b: REL
+	secret-elf-c: REL
+	secret-elf-d: EXEC
+	secret-elf-e: EXEC
+
+2)  secret-elf-a: alphabet, puts, prsym, strtol, __printf_chk, main
+	secret-elf-b: alphabet
+	secret-elf-c: alphabet, __printf_chk, putchar
+	secret-elf-d: __gmon_start__, __libc_start_main, __printf_chk, putchar
+	secret-elf-e: puts, __gmon_start__, __libc_start_main, __printf_chk, strtol
+	
+3)  secret-elf-a: uses alphabet
+	secret-elf-b:
+	secret-elf-c: uses alphabet
+	secret-elf-d:
+	secret-elf-e: 
+
+4) We can create d & e (executable files) from a, b, c 
+
+5) yes, those are files from our first lab :)
